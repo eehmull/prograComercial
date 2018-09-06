@@ -25,7 +25,7 @@ SECRET_KEY = '6&)=4jp7q$_n-k%5d+jm(#3g05v%w4s0uuywu9#2@^t84*s#d+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://eehmull.pythonanywhere.com/',]
 
 
 # Application definition
