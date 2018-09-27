@@ -1,14 +1,14 @@
 {% extends 'blog/base.html' %}
 
   {% block content %}
-    {% for p in articulos %}
-        <div class="post">
-          <div class="date">
-            <p>Publicado: {{ p.fecha_publicacion }}</p>
-          </div>
+      {% for p in articulos %}
+          <div class="post">
+            <div class="date">
+              <p>Publicado: {{ p.fecha_publicacion }}</p>
+            </div>
             <h1><a href="">{{ p.titulo }}</a></h1>
             <p>Autor: {{p.autor|linebreaksbr  }}</p>
             <p>{{ p.texto|linebreaksbr }}</p>
         </div>
-    {% endfor %}
-{% endblock %}
+     {% endfor %}
+  {% endblock %}
