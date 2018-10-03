@@ -1,5 +1,5 @@
 {% load staticfiles %}
-    <html>
+<html>
         <head>
             <title>Django Girls blog</title>
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -9,16 +9,16 @@
             <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         </head>
         <body>
-          <div class="page-header">
+            <div class="page-header">
               <h1><a href="/">Django Girls Blog</a></h1>
-          </div>
-          <div class="content container">
-              <div class="row">
-                  <div class="col-md-8">
-                  {% block content %}
-                  {% endblock %}
-                  </div>
-              </div>
-          </div>
+            </div>
+                <div class="content container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            {% block content %}
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
       </body>
 </html>

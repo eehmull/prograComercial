@@ -6,7 +6,7 @@
             <div class="date">
             <p>Publicado: {{ p.fecha_publicacion }}</p>
             </div>
-            <h1><a href="">{{ p.titulo }}</a></h1>
+            <h1><a href="{% url 'detalle' pk=p.pk %}">{{ p.titulo }}</a></h1>
             <p>Autor: {{p.autor|linebreaksbr  }}</p>
             <p>{{ p.texto|linebreaksbr }}</p>
         </div>
