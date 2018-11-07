@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['eehmull.pythonanywhere.com','127.0.0.1',]
 
-
+LOGIN_REDIRECT_URL = '/'
 # Application definition
 
 INSTALLED_APPS = [
