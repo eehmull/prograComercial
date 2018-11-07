@@ -23,3 +23,17 @@ def nuevo(request):
     else:
         formulario = PubForm()
     return render(request, 'blog/editar.html', {'formulario': formulario})
+
+def editar(request, pk):
+    formulario = get_object_or_404(Publicar, pk=pk)
+    if request.method == "POST":
+        formulario = PubForm(request.POST, instance=formulario)
+        if formulario.is_valid():
+            pub = formulario.save(commit=False)
+            pub.autor = request.user
+            pub.fecha_publicacion = timezone.now()
+            pub.save()
+            return redirect('editar', pk=pub.pk)
+    else:
+        formulario = PubForm(instance=formulario)
+    return render(request, 'blog/editar.html', {'formulario': formulario})
